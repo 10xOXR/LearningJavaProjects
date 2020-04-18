@@ -3,7 +3,11 @@ package dev.twobeardednomads;
 import java.util.ArrayList;
 
 public class GroceryList {
-    private ArrayList<String> groceryList = new ArrayList<String>();
+    private ArrayList<String> groceryList;
+
+    public GroceryList() {
+        groceryList = new ArrayList<>();
+    }
 
     public ArrayList<String> getGroceryList() {
         return groceryList;
@@ -16,7 +20,7 @@ public class GroceryList {
     public void printGroceryList() {
         System.out.println("You have " + groceryList.size() + " items in your list.");
         for (int i = 0; i < groceryList.size(); i++) {
-            System.out.println((i + 1) + ". " + groceryList.get(i));
+            System.out.println("\t" + (i + 1) + ". " + groceryList.get(i));
         }
     }
 
@@ -55,9 +59,6 @@ public class GroceryList {
 
     public boolean onFile(String searchItem) {
         int position = findItem(searchItem);
-        if (position >= 0) {
-            return true;
-        }
-        return false;
+        return position >= 0;
     }
 }

@@ -9,7 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         boolean quit = false;
-        int choice = 0;
+        int choice;
         printInstructions();
         while (!quit) {
             System.out.println("Enter your choice:");
@@ -87,10 +87,10 @@ public class Main {
     public static void processArrayList() {
         // Examples of copying ArrayLists
 
-        ArrayList<String> newArray = new ArrayList<String>();
+        ArrayList<String> newArray = new ArrayList<>();
         newArray.addAll(groceryList.getGroceryList());
 
-        ArrayList<String> nextArray = new ArrayList<String>(groceryList.getGroceryList());
+        ArrayList<String> nextArray = new ArrayList<>(groceryList.getGroceryList());
 
         String[] stringArray = new String[groceryList.getGroceryList().size()];
         stringArray = groceryList.getGroceryList().toArray(stringArray);
