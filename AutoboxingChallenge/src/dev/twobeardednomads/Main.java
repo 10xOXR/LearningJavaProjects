@@ -53,7 +53,7 @@ public class Main {
 
     private static void printActions() {
         System.out.println("\nAvailable actions:");
-        System.out.println("0  - to quit\n" +
+        System.out.println("0  - Quit application.\n" +
                 "1  - Add new Branch.\n" +
                 "2  - List all branches.\n" +
                 "3  - Add new customer to existing branch.\n" +

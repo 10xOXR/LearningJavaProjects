@@ -20,16 +20,14 @@ public class Bank {
 
     public boolean addCustomer(Branch branch, Customer customer) {
         if (findBranch(branch) >= 0 && branch.queryCustomer(customer.getCustName()) == null) {
-            branch.addCustomer(customer);
-            return true;
+            return branch.addCustomer(customer);
         }
         return false;
     }
 
     public boolean addTransaction(Branch branch, Customer customer, double transaction) {
         if (findBranch(branch) >= 0 && branch.queryCustomer(customer.getCustName()) != null) {
-            branch.addTransaction(customer, transaction);
-            return true;
+            return branch.addTransaction(customer, transaction);
         }
         return false;
     }
@@ -69,7 +67,7 @@ public class Bank {
                         System.out.println();
                     } else {
                         for (Double transaction: customer.getTransactions()) {
-                            System.out.println("\t" + count + ". " +transaction);
+                            System.out.println("\t" + count + ". " + transaction);
                             count++;
                         }
                         System.out.println("Current Balance: €" + customer.getBalance());
