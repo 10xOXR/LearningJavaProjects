@@ -62,7 +62,7 @@ public class Demo {
         ListIterator<String> listIterator = cities.listIterator();
 
         if(cities.isEmpty()) {
-            System.out.println("No cities in the itenerary");
+            System.out.println("No cities in the itinerary");
             return;
         } else {
             System.out.println("Now visiting " + listIterator.next());
