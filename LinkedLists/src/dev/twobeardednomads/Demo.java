@@ -24,7 +24,7 @@ public class Demo {
     }
 
     private static void printList(LinkedList<String> linkedList) {
-        Iterator<String> i= linkedList.iterator();
+        Iterator<String> i = linkedList.iterator();
         while(i.hasNext()) {
             System.out.println("Now visiting " + i.next());
         }
@@ -42,7 +42,7 @@ public class Demo {
                 return false;
             } else if(comparison > 0) {
                 // new City should appear before this one
-                // Brisbane  -> Adelaide
+                // Cork -> Dublin
                 stringListIterator.previous();
                 stringListIterator.add(newCity);
                 return true;
